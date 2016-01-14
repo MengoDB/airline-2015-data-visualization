@@ -21,10 +21,13 @@ Before studying the dataset, I expect that multiple carriers might share similar
 
 Below is the first plot.
  
+![alt tag](https://github.com/MengoDB/airline-2015-data-visualization/blob/master/Rplot.png)
+
 This plot includes 15 carriers. Too many carriers would make this chart too crowded. To display the trends more distinguishable, I truncated the dataset to feature only 5 biggest airlines with 5 highest gross numbers of flights in 2015. The selected airlines are American Airlines Inc., Delta Airlines Inc., ExpressJet Airlines Inc., SkyWest Airlines Inc. and Southwest Airlines Co..
 
 The new line chart with top 5 airlines is shown below.
 
+![alt tag](https://github.com/MengoDB/airline-2015-data-visualization/blob/master/Rplot02_top5.png)
  
 My initial evaluation of this chart was that it could clearly show the trends of on-time performance over year. It could answer the audience two questions. The first question: which airline is likely to be on-time and which one not. This helps customers better choose airline when purchasing flight tickets. The second question: which month flights is likely to be delayed on even though he or she chooses the airline with best performance. Weather, travel season or other issues account for delays instead of airline services. The chart would help travellers better plan the trip in different months.
 
@@ -40,7 +43,8 @@ I used D3.js and dimple.js to create the initial data visualization. Specific ch
 •	Legend is placed at top right for better organization.
 
 The initial visualization can be viewed at index-initial.html. Screenshot is placed below:
- 
+
+![alt tag](https://github.com/MengoDB/airline-2015-data-visualization/blob/master/initial.png)
 
 ## Feedback
 
@@ -71,6 +75,8 @@ With the feedback from the 3 interviewers, I made the following changes to the i
 
 1.	I changed the chart title by emphasizing on trend exploring and comprising, in order to guide audience to get information from data as much as possible.
 2.	I also changed the radium of all the scatter circles to make the chart cleaner.
+
+![alt tag](https://github.com/MengoDB/airline-2015-data-visualization/blob/master/final.png)
 
 ## Resources
 
