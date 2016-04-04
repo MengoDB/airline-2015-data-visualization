@@ -17,7 +17,8 @@
       
       function draw(data) {
         'use strict';
- 
+        
+        // find minimum value of the time records
         var minOnTimeValue = (function(data, field) {
           var minimum = 1;
           data.forEach(function(record) {
@@ -27,49 +28,56 @@
           });
           return minimum;
         })(data, 'on_time_ct');
+
+        // set scale of y axis
         var minY = Math.max(Math.round(minOnTimeValue*10)/10-0.05,0),
             maxY = 1;
+
+        // add title
         d3.select('#content')
           .append('h2')
           .attr('id', 'title')
-          .text('Trend and Comparison: On-time Arrival Rates for Top U.S. Domestic Airlines, 2015');
+          .text('Delta airlines consistently the top performer of 2015 in on time arrival percentage');
+
+        // set svg with width and height
         var width = 1000,
             height = 600;
         var svg = dimple.newSvg('#content', width, height);
-        
         var myChart = new dimple.chart(svg, data);
+
         // set x axis
         var x = myChart.addTimeAxis('x', 'year_month');
         x.dateParseFormat = "%Y-%m";
         x.tickFormat = '%Y-%m';
         x.title = 'Year-Month';
+
         // set y axis
         var y = myChart.addMeasureAxis('y', 'on_time_ct');
         y.tickFormat = '%';
         y.overrideMin = minY;
         y.overrideMax = maxY;
         y.title = 'Percentage of Arrivals on Time';
+
+        // add lines and scatters to the chart
         myChart.addSeries('carrier', dimple.plot.line);
         myChart.addSeries('carrier', dimple.plot.scatter);
         myChart.addLegend(650, 60, 250, 60, 'right');
         myChart.draw();
 
-
+        // set radius and opacity for the scatters
         svg.selectAll("circle")
         .attr("opacity", 0.8)
         .attr("r", 3);
 
-        /*
-        var line = d3.svg.line()
-        .x(function(d) { return myChart.axes[0]._draw.scale()(d.x); })
-        .y(function(d) { return myChart.axes[1]._draw.scale()(d.y); });
-        d3.select("svg").select("g").append("path")
-        .datum([{x:myChart.axes[0]._min,y:0.83},{x:myChart.axes[0]._max,y:0.83}])
-        .attr("d",line)
-        .style("stroke","blue")
-        .style("stroke-width",3)
-        .text("average line")
-        */
+        // set delta line thicker
+        svg.select("path.dimple-delta-air-lines-inc-")
+        .attr("stroke-width",8);
+
+        // add notes for selected flights
+        d3.select('#content')
+        .append('h4')
+        .attr('id','text')
+        .text('* Selected airline carriers took 5 highest gross numbers of flights in 2015');
       }
     </script>
   </head>
