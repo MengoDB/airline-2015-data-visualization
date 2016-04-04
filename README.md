@@ -69,7 +69,7 @@ This chart is a dashboard to show on-time performance among top five domestic ai
 
 For the visual code and layout, you could emphasize on the best value every month.
 
-### Feedback from first submit to Udacity
+### Feedback from first submission to Udacity
 
 Summary: The dashboard should focus on one finding and display it to audience. For example, the story that Delta performs best ontime rate over 2015. The other story about seasonality of on-time performance cannot be proved by a single year's data. The selection of the top 5 carriers are not explained.
 
