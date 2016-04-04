@@ -69,14 +69,21 @@ This chart is a dashboard to show on-time performance among top five domestic ai
 
 For the visual code and layout, you could emphasize on the best value every month.
 
+### Feedback from first submit to Udacity
+
+Summary: The dashboard should focus on one finding and display it to audience. For example, the story that Delta performs best ontime rate over 2015. The other story about seasonality of on-time performance cannot be proved by a single year's data. The selection of the top 5 carriers are not explained.
+
 ## Post-feedback Design
 
 With the feedback from the 3 interviewers, I made the following changes to the initial chart:
 
-1.	I changed the chart title by emphasizing on trend exploring and comprising, in order to guide audience to get information from data as much as possible.
-2.	I also changed the radium of all the scatter circles to make the chart cleaner.
 
-![alt tag](https://github.com/MengoDB/airline-2015-data-visualization/blob/master/final.png)
+1.	I changed the radium of all the scatter circles to make the chart cleaner.
+2.	I changed the title to 'Delta airlines consistently the top performer of 2015 in on time arrival percentage' which explain my findings more clearly.
+3.	I made the line for Delta airline thicker, which could emphasize on its best performance.
+4.	I added notes at the end which explained how the airlines were selected to the dashboard.
+
+![alt tag]()
 
 ## Resources
 
