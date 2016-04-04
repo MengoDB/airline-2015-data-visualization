@@ -83,7 +83,7 @@ With the feedback from the 3 interviewers, I made the following changes to the i
 3.	I made the line for Delta airline thicker, which could emphasize on its best performance.
 4.	I added notes at the end which explained how the airlines were selected to the dashboard.
 
-![alt tag]()
+![alt tag](https://github.com/MengoDB/airline-2015-data-visualization/blob/master/final.png)
 
 ## Resources
 
